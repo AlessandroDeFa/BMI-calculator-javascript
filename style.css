@@ -22,6 +22,7 @@ body {
   overflow: hidden;
   padding: 1rem;
   border-radius: 2rem;
+  position: relative;
 }
 
 /* TITLE-- */
@@ -103,4 +104,16 @@ label {
   color: #94A69F;
   text-transform: uppercase;
   font-weight: 600;
+}
+
+/* --Error message */
+
+#error-message {
+  position: absolute;
+  font-size: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: red;
+  bottom: 1.5rem;
+  display: none;
 }
