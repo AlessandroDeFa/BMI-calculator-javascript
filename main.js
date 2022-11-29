@@ -6,17 +6,21 @@ const comment = document.querySelector('.comment-span');
 const error = document.querySelector('#error-message');
 
 // adding click listeners
+
 button.addEventListener('click', ()=>{
  
   calculateBmi();
 })
 
 // BMI calculation =  weight(kg) * (height(m) * height(m))
+
 const calculateBmi = ()=>{
   let heightValue = height.value;
   let weightValue = weight.value;
   let total = '';
+  
   // condition if empty 
+  
   if(heightValue == '' || weightValue == ''){
     error.style.display = 'block';
     comment.innerText = '';
@@ -27,6 +31,7 @@ const calculateBmi = ()=>{
   }
 
   // calculation
+  
   heightValue = heightValue / 100;
   total = weightValue / (heightValue * heightValue);
   total = total.toFixed(2);
